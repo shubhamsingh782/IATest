@@ -86,7 +86,7 @@ def computeBoundary(allRectDims,n):
 
 		
 def main():
-	n = int(input("Number of rectangles:"))
+	n = int(input())
 	allRectDims = []
 
 
