@@ -18,7 +18,7 @@ def merge(l1,l2,output):
 	x_pos_1 = x_pos_2 = 0
 	currHeight = leftHeight = rightHeight = 0
 
-	print("val :",l1,l2,output)
+	#print("val :",l1,l2,output)
 
 	while x_pos_1 < l_l1 and x_pos_2 < l_l2:
 		point1 ,point2 = l1[x_pos_1], l2[x_pos_2]

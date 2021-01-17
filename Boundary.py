@@ -62,8 +62,8 @@ def joinBoundary(part1,part2):
 	put(right,part2,l_part2,rightHeight,currHeight,output)
 
 
-	print("Output: ")
-	print(output)
+	#print("Output: ")
+	#print(output)
 
 	return output
 
@@ -81,8 +81,8 @@ def computeBoundary(allRectDims,n):
 	part1 = computeBoundary(allRectDims[:pivot],pivot)
 	part2 = computeBoundary(allRectDims[pivot:],n-pivot)
 	
-	print("part1 ",part1)
-	print("part2 ",part2)
+	#print("part1 ",part1)
+	#print("part2 ",part2)
 	
 	return joinBoundary(part1,part2)
 
