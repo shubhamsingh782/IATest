@@ -1,3 +1,5 @@
+import datetime
+
 def put(position,part,l_part,height,currHeight,output):
 
 	#print("from put:",position,l_part,height,currHeight)
@@ -60,8 +62,8 @@ def joinBoundary(part1,part2):
 	put(right,part2,l_part2,rightHeight,currHeight,output)
 
 
-	#print("Output: ")
-	#print(output)
+	print("Output: ")
+	print(output)
 
 	return output
 
@@ -79,8 +81,8 @@ def computeBoundary(allRectDims,n):
 	part1 = computeBoundary(allRectDims[:pivot],pivot)
 	part2 = computeBoundary(allRectDims[pivot:],n-pivot)
 	
-	#print("part1 ",part1)
-	#print("part2 ",part2)
+	print("part1 ",part1)
+	print("part2 ",part2)
 	
 	return joinBoundary(part1,part2)
 
@@ -94,7 +96,10 @@ def main():
 		dimensions = list(map(int,input().split(" ")))
 		allRectDims.append(dimensions)
 
+	a = datetime.datetime.now()
 	outList = computeBoundary(allRectDims,n)
+	b = datetime.datetime.now()
+	#print(b-a)
 
 	print(outList)
 
