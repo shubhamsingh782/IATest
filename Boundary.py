@@ -88,20 +88,23 @@ def computeBoundary(allRectDims,n):
 
 		
 def main():
-	n = int(input())
-	allRectDims = []
+	#n = int(input())
+	allRectDims =  [(0,5,8),(3,7,12),(0,10,10)]
+	n = len(allRectDims)
 
-
+	"""
 	for i in range(n):
 		dimensions = list(map(int,input().split(" ")))
 		allRectDims.append(dimensions)
-
+	"""
 	a = datetime.datetime.now()
 	outList = computeBoundary(allRectDims,n)
 	b = datetime.datetime.now()
-	#print(b-a)
-
-	print(outList)
+	
+	print("Input :",allRectDims)
+	print("Output :",outList)
+	#print("Time Taken :",b-a)
+	
 
 	
 

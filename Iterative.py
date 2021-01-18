@@ -59,8 +59,6 @@ def Approach2(allRectDims,n):
 	
 	l1 = [[x01,y0],[x02,0]]
 
-	#a = datetime.datetime.now()
-
 	for i in range(1,n):
 		output = []
 		x1,x2,y = allRectDims[i][0],allRectDims[i][1],allRectDims[i][2]
@@ -68,24 +66,26 @@ def Approach2(allRectDims,n):
 		output = merge(l1,l2,output)
 		l1 = output
 
-	#b = datetime.datetime.now()
-	#print(b-a)
-
 	return output
 
 
 def main():
-	n = int(input())
-	allRectDims = []
+	#n = int(input())
+	allRectDims =  [(0,5,8),(3,7,12),(0,10,10)]
+	n = len(allRectDims)
 
-
+	"""
 	for i in range(n):
 		dimensions = list(map(int,input().split(" ")))
 		allRectDims.append(dimensions)
-
+	"""
+	a = datetime.datetime.now()
 	outList = Approach2(allRectDims,n)
+	b = datetime.datetime.now()
 
-	print(outList)
+	print("Input :",allRectDims)
+	print("Output :",outList)
+	#print("Time Taken :",b-a)
 
 	
 
